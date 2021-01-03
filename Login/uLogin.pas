@@ -17,8 +17,10 @@ type
     lbl2: TLabel;
     lbl3: TLabel;
     imgLogo: TImage;
+    procedure edtSenhaExit(Sender: TObject);
   private
     { Private declarations }
+    procedure ValidaCampos;
   public
     { Public declarations }
   end;
@@ -29,5 +31,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmLogin.edtSenhaExit(Sender: TObject);
+begin
+//
+end;
+
+procedure TfrmLogin.ValidaCampos;
+begin
+
+end;
 
 end.

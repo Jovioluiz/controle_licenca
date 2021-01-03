@@ -39,7 +39,8 @@ object frmLogin: TfrmLogin
       ParentShowHint = False
       ShowHint = False
       Layout = tlCenter
-      ExplicitLeft = 50
+      ExplicitWidth = 173
+      ExplicitHeight = 25
     end
   end
   object pnlInferior: TPanel
@@ -49,10 +50,6 @@ object frmLogin: TfrmLogin
     Height = 205
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 232
-    ExplicitTop = 112
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object lbl2: TLabel
       Left = 272
       Top = 48
@@ -81,9 +78,9 @@ object frmLogin: TfrmLogin
     end
     object imgLogo: TImage
       Left = 1
-      Top = 6
+      Top = 0
       Width = 265
-      Height = 195
+      Height = 201
       Picture.Data = {
         0A544A504547496D6167658C2B0000FFD8FFE000104A46494600010101004800
         480000FFDB00430006040506050406060506070706080A100A0A09090A140E0F
@@ -460,6 +457,7 @@ object frmLogin: TfrmLogin
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      OnExit = edtSenhaExit
     end
   end
 end
