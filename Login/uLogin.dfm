@@ -3,7 +3,7 @@ object frmLogin: TfrmLogin
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Login '
-  ClientHeight = 262
+  ClientHeight = 258
   ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,8 +11,11 @@ object frmLogin: TfrmLogin
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object pnlSuperior: TPanel
@@ -39,17 +42,18 @@ object frmLogin: TfrmLogin
       ParentShowHint = False
       ShowHint = False
       Layout = tlCenter
-      ExplicitWidth = 173
-      ExplicitHeight = 25
+      ExplicitHeight = 40
     end
   end
   object pnlInferior: TPanel
     Left = 0
     Top = 57
     Width = 635
-    Height = 205
+    Height = 201
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 40
+    ExplicitHeight = 218
     object lbl2: TLabel
       Left = 272
       Top = 48
@@ -432,6 +436,18 @@ object frmLogin: TfrmLogin
         CA5DBC8D1750EA54FDFA76FDBDBFF0EDFB7B7EDEDFA1C7E102039A097CE65D7E
         93EA3D3B716256A20FC317F1A5DFB6174A79747A76FDBDBF77FFD9}
     end
+    object lblInfo: TLabel
+      Left = 400
+      Top = 144
+      Width = 225
+      Height = 16
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
     object edtUsuario: TEdit
       Left = 400
       Top = 48
@@ -444,10 +460,11 @@ object frmLogin: TfrmLogin
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      OnExit = edtUsuarioExit
     end
-    object edtSenha: TEdit
+    object edtSenha: TMaskEdit
       Left = 400
-      Top = 96
+      Top = 98
       Width = 225
       Height = 27
       Font.Charset = DEFAULT_CHARSET
@@ -456,7 +473,9 @@ object frmLogin: TfrmLogin
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      PasswordChar = '*'
       TabOrder = 1
+      Text = ''
       OnExit = edtSenhaExit
     end
   end

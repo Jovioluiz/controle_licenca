@@ -72,7 +72,7 @@ CREATE TABLE endereco (
     logradouro varchar(50) NOT NULL,
     num int4 NULL,
     bairro varchar(50) NULL,
-    complemento varchar(50) null
+    complemento varchar(50) NULL,
     cidade varchar(50) NULL,
     uf varchar(2)NULL,
     dt_atz timestamp NULL,
@@ -209,3 +209,7 @@ insert
 update
     on
     public.usuario_acao for each row execute procedure func_grava_dt_atz();
+
+
+ALTER TABLE public.cliente ADD ativo boolean NULL DEFAULT False;
+alter table endereco rename to endereco_cliente;
